@@ -17,7 +17,7 @@ class Train(models.Model):
 
 class TrainTicket(models.Model): 
     #we will see about this user shit 
-    # user = models.ForeignKey(User , on_delete=models.CASCADE, null = True, blank=True)
+    user = models.ForeignKey(User , on_delete=models.CASCADE, null = True, blank=True)
     
     most_word = models.ForeignKey(Train, on_delete=models.CASCADE)
     Booked_Date = models.DateTimeField(auto_now_add=True)

@@ -1,13 +1,13 @@
-{% load static %}
+{% extends 'index.html' %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
+
+{% block content %}
+
+    <h1>train-id:{{ticket.id}}</h1>
+    <h1>train_number:{{ticket.train_number}}</h1>
+    <h3>From: {{ticket.from_station}}</h3>
+    <h3>To: {{ticket.to_station}}</h3>
+    <p>{{ticket.seatNo}}</p>
+    <p>username:{{ticket.user.uername}}</p>
+
+{% endblock %}
